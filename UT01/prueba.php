@@ -9,5 +9,5 @@ if( $b < $a){
 } else{
    echo $resul - 1.5;
 }
-
+echo Fin;
 ?>
