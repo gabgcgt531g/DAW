@@ -1,18 +1,20 @@
 body{
    background-color: rgb(90, 88, 88);
+   font-family: monospace;
 }
 h1{
-   color: wheat;
+   color: rgb(97, 97, 232);
+   font-size: 32px;
 }
 h2{
-   color: wheat;
+   color: black;
+   font-size: 26px;
 }
 
 div {
-   color: whitesmoke;
-   font-family: monospace;
+   color: whitesmoke;   
    font-size: 18px;
    font-weight: bold;
-   margin-left: 15px;
+   margin-left: 30px;
    border-radius: 1%;
 }
