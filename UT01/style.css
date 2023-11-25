@@ -1,0 +1,18 @@
+body{
+   background-color: rgb(90, 88, 88);
+}
+h1{
+   color: wheat;
+}
+h2{
+   color: wheat;
+}
+
+div {
+   color: whitesmoke;
+   font-family: monospace;
+   font-size: 18px;
+   font-weight: bold;
+   margin-left: 15px;
+   border-radius: 1%;
+}
