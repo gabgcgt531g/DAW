@@ -1,0 +1,14 @@
+<target name="deploy" description="Deploy web application"
+        depends="build">
+        <deploy url="${url}" username="${username}"
+                password="${password}"
+                path="${path}" war="file:${build}/${example}.war"/>
+</target> 
+<!--
+<taskdef name="deploy"  
+         classname="org.apache.catalina.ant.DeployTask"/>
+
+<property name="url" value="http://localhost:8080/manager"/>
+<property name="path" value="/${example}"/>
+<property name="example" value="hola" />
+-->

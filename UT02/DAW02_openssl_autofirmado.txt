@@ -1,0 +1,30 @@
+root@debian-servidor-fp:/etc/apache2/tus-ssl# openssl  req -new -nodes -keyout tupaginaweb.key -out tupaginaweb.csr
+Generating a 1024 bit RSA private key
+......................................++++++
+.++++++
+writing new private key to 'tupaginaweb.key'
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:ES
+State or Province Name (full name) [Some-State]:
+Locality Name (eg, city) []:
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:
+Organizational Unit Name (eg, section) []:
+Common Name (eg, YOUR name) []:autofirmado.ssl.empresa-proyecto.com
+Email Address []:
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:
+An optional company name []:
+root@debian-servidor-fp:/etc/apache2/tus-ssl# openssl x509 -in tupaginaweb.csr -out tupaginaweb.crt -req -signkey tupaginaweb.key -days 3650
+Signature ok
+subject=/C=ES/ST=Some-State/O=Internet Widgits Pty Ltd/CN=autofirmado.ssl.empresa-proyecto.com
+Getting Private key
+root@debian-servidor-fp:/etc/apache2/tus-ssl#

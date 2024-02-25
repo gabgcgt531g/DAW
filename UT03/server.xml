@@ -1,0 +1,7 @@
+<Conector port="8080"
+     protocol="HTTP/1.1"
+     maxTherads="150"
+     scheme="https"
+     secure="true"
+     clientAuth="false"
+     sslProtocol="TLS"/>

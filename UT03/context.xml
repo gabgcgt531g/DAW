@@ -1,0 +1,17 @@
+<Context>
+  <!-- classname  especifica la clase del servidor que implementa el gestor, es recomendable utilizar el org.apache.catalina.session.PersistentManager -->
+  <Manager className="org.apache.catalina.session.PersistentManager">
+      <!--saveOnRestart=true para indicar que se guarden todas las sesiones al reiniciar el servidor -->
+      saveOnRestart="true"
+      <!--maxActiveSession cuando se supera el límite aquí establecido se comienzan a enviar a disco las nuevas sesiones. Se establece un valor -1 para indicar ilimitadas sesiones-->
+      maxActiveSession="3"
+      <!--minIdleSwap establece el número mínimo de segundos que transcurren antes de que una sesión pueda copiarse al disco duro -->
+      minIdleSwap="0"
+      <!--maxIdleSwap indica el número máximo de segundos que transcurren antes de que una sesión pueda copiarse al disco duro -->
+      maxIdleSwap="60"
+      <!--maxIdleBackup para indicar el número de segundos desde que una sesión estuvo activa por última vez hasta que se envíe al disco. La sesión no es eliminada de memoria. Permite restauración de la sesión en caso de caída del servidor. -->
+      maxIdleBackup="5">
+      <!--Store indica cómo y donde almacenar la sesión, están disponibles las siguientes implementaciones: org.apache.catalina.session.FileStore y org.apache.catalina.session.JDBCStore -->
+      <Store className="org.apache.catalina.session.FileStore" />
+  </Manager>
+</Context>

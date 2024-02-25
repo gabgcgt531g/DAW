@@ -1,0 +1,16 @@
+<project name="Proyecto">
+  <target name="init">
+          <mkdir dir="classes" />
+          <mkdir dir="build" />
+  </target>
+  <target name="compile" depends="init">
+          <javac srcdir="src" destdir="classes" />
+  </target>
+  <target name="build" depends="compile">
+          <jar destfile="build/proyecto.jar" basedir="classes" />
+  </target>
+  <target name="clean">
+          <delete dir="classes" />
+          <delete dir="build" />
+  </target>
+</project>
